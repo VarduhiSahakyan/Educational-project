@@ -1,4 +1,4 @@
-drop table if exists mamber;
+drop table if exists member;
 CREATE TABLE `userdb`.`member`
 (
     `username` VARCHAR(45) NOT NULL,

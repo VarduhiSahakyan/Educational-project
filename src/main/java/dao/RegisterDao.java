@@ -20,9 +20,9 @@ public class RegisterDao {
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, member.getUsername());
-            ps.setString(2, member.getPassword());
-            ps.setString(3, member.getEmail());
-            ps.setString(4, member.getPhone());
+            ps.setString(2, member.getEmail());
+            ps.setString(3, member.getPhone());
+            ps.setString(4, member.getPassword());
             ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
