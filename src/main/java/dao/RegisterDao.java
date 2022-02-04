@@ -9,12 +9,12 @@ import java.sql.SQLException;
 
 public class RegisterDao {
 
+    static String result;
 
-    public String insert (Member member){
-        ConnectionToUserDB.loadDriver();
+    public String insert(Member member) {
         Connection connection = ConnectionToUserDB.getRegisterConnection();
         System.out.println("ConnectionToUserDB is " + connection);
-        String result = "User was registered";
+        result = "User was registered";
         String sql = "insert into userdb.member values(?,?,?,?)";
 
         try {
@@ -24,9 +24,9 @@ public class RegisterDao {
             ps.setString(3, member.getEmail());
             ps.setString(4, member.getPhone());
             ps.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-            result = "Data not entered";
+            result = "User wos not registered";
         }
         return result;
 
