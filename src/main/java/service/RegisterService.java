@@ -24,8 +24,6 @@ public class RegisterService {
         if (member.getPassword() == null) {
             result = String.valueOf(new NullPointerException());
         }
-
         return result;
     }
-
 }

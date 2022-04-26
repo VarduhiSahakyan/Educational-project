@@ -3,6 +3,7 @@ package servlet;
 
 import dao.RegisterDao;
 import model.Member;
+import service.RegisterService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +13,6 @@ import java.io.IOException;
 
 
 public class RegisterServlet extends HttpServlet {
-
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         try {
@@ -33,15 +33,12 @@ public class RegisterServlet extends HttpServlet {
 
         Member member = new Member(username, password, email, phone);
 
-        RegisterDao registerDao = new RegisterDao();
-        String result = registerDao.insert(member);
+        RegisterService registerService = new RegisterService();
+        String result = registerService.insert(member);
         try {
             response.getWriter().print(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 }

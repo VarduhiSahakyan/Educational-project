@@ -22,10 +22,8 @@ public class ConnectionToUserDB {
             }
         }
 
-
     static Connection getRegisterConnection() {
 
         return connection;
-
     }
 }

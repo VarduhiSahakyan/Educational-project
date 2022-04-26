@@ -29,8 +29,6 @@ public class RegisterDao {
             result = "User wos not registered";
         }
         return result;
-
-
     }
 }
 
