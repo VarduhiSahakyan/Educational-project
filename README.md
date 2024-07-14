@@ -1,6 +1,6 @@
-# Educational-project
+# User registration
 
-User registration educational project with 
+Educational project with 
 JDBC , 
 servlet 
 and 
